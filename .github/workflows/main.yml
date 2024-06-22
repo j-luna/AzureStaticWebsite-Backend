@@ -28,7 +28,7 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
-        template: ./bicep/function_app_deploy.bicep
+        template: build/main.bicep
         parameters: 'appNameSuffix=${{ env.APP_NAME_SUFFIX }}'
         deploymentName: 'deployment-${{ github.run_number }}'
         failOnStdErr: false
