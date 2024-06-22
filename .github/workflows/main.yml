@@ -7,7 +7,7 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './python/'
-  APP_SUFFIX_NAME: 'webproj14215'
+  APP_NAME_SUFFIX: 'webproj14215'
   PYTHON_VERSION: '3.11'
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./bicep/function_app_deploy.bicep
-        parameters: 'appNameSuffix=${{ env.APP_SUFFIX_NAME}}'
+        parameters: 'appNameSuffix=${{ env.APP_NAME_SUFFIX }}'
         failOnStdErr: false
 
     - name: Get the most recent deployment name
