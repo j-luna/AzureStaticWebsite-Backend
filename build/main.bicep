@@ -37,6 +37,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-05-01' = {
     supportsHttpsTrafficOnly: true
     accessTier: 'Hot'
   }
+  tags: resourceGroup().tags
 }
 
 // App Service Plan
@@ -51,12 +52,14 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' = {
   properties: {
     reserved: true
   }
+  tags: resourceGroup().tags
 }
 
 // Log Analytics Workspace
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' = {
   name: workspaceName
   location: location
+  tags: resourceGroup().tags
 }
 
 // Application Insights
@@ -70,6 +73,7 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     publicNetworkAccessForQuery: 'Enabled'
     WorkspaceResourceId: logAnalyticsWorkspace.id
   }
+  tags: resourceGroup().tags
 }
 
 // Function App
@@ -120,6 +124,7 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
     }
     httpsOnly: false
   }
+  tags: resourceGroup().tags
 }
 
 // Cosmos DB Account
@@ -181,6 +186,7 @@ resource cosmosDBAccount 'Microsoft.DocumentDB/databaseAccounts@2024-05-15' = {
       totalThroughputLimit: 4000
     }
   }
+  tags: resourceGroup().tags
 }
 
 // Cosmos DB Table
@@ -192,6 +198,7 @@ resource cosmosDBTable 'Microsoft.DocumentDB/databaseAccounts/tables@2024-05-15'
       id: cosmosDBTableName
     }
   }
+  tags: resourceGroup().tags
 }
 
 
