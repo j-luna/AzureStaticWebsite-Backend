@@ -114,6 +114,7 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
       cors: {
         allowedOrigins: [
           'https://azure.smamonas.com'
+          'https://portal.azure.com'
         ]
       }
     }
