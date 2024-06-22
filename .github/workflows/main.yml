@@ -30,7 +30,7 @@ jobs:
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./bicep/function_app_deploy.bicep
         parameters: 'appNameSuffix=${{ env.APP_NAME_SUFFIX }}'
-        deploymentName: 'deployment-${{ github.run_number }}
+        deploymentName: 'deployment-${{ github.run_number }}'
         failOnStdErr: false
 
     - name: Get the most recent deployment name
