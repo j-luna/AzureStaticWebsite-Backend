@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './python/'
   APP_NAME_SUFFIX: 'webproj14215'
