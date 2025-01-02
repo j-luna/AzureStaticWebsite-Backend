@@ -11,7 +11,7 @@ concurrency:
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './python/'
-  APP_NAME_SUFFIX: 'aswbackend001'
+  APP_NAME_SUFFIX: 'aswbackend4124'
   PYTHON_VERSION: '3.11'
 
 jobs:
