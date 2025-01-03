@@ -13,6 +13,7 @@ def VisitorCounterFunction(req: func.HttpRequest) -> func.HttpResponse:
     # Initialize Table Service Client
     # Comment - might delete later
     # Comment - might delete later
+    # Comment
     connection_string = os.getenv("VisitorCountTableDB")
     table_name = "VisitorCountTable"
     table_service_client = TableServiceClient.from_connection_string(connection_string)
