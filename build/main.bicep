@@ -1,5 +1,5 @@
 @description('Specifies region of all resources.')
-param location string = resourceGroup().location
+param location string = 'centralus'
 
 @description('Storage account SKU name.')
 @allowed([
