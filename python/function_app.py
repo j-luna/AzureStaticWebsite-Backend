@@ -11,6 +11,7 @@ def VisitorCounterFunction(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
     
     # Initialize Table Service Client
+    # Test commit
     connection_string = os.getenv("VisitorCountTableDB")
     table_name = "VisitorCountTable"
     table_service_client = TableServiceClient.from_connection_string(connection_string)
