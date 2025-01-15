@@ -119,7 +119,7 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
         allowedOrigins: [
           'https://blog.smamonas.com'
           'https://portal.azure.com'
-          'https://fn-aswbackend412451.azurewebsites.net'
+          'https://fn-aswbackend4124.azurewebsites.net'
         ]
       }
     }
