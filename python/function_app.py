@@ -14,6 +14,7 @@ def VisitorCounterFunction(req: func.HttpRequest) -> func.HttpResponse:
     # Comment - might delete later
     # Comment - might delete later
     # Comment
+    # Fourth comment test
     connection_string = os.getenv("VisitorCountTableDB")
     table_name = "VisitorCountTable"
     table_service_client = TableServiceClient.from_connection_string(connection_string)
